@@ -20,6 +20,9 @@ end
 def ticket.price
   5.50
 end
+def ticket.available?
+    false
+end
 
 puts "This ticket is for: #{ticket.event}, at #{ticket.venue}." +
           "The performer is #{ticket.performer}." +
