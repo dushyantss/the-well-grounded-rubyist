@@ -1,13 +1,11 @@
 # frozen_string_literal: true
 
+load "my_each"
+
 class Array
   def my_map
-    c = 0
     acc = []
-    while c < size
-      acc << yield(self[c])
-      c += 1
-    end
+    my_each { |e| acc << yield(e) }
     acc
   end
 end
